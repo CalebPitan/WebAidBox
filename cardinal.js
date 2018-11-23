@@ -327,7 +327,7 @@
 				var right_dimension = ("-" + ((width - (windowWidth - start)).toString()) + unit);
 				var left_dimension = ("-" + ((width - start).toString()) + unit);
 
-				//windowWidth = __proto__.deviceWidth;
+				windowWidth = __proto__.deviceWidth;
 				
 
 				// Logic: when `start` for `direction = left` > 0 and <= `minimumDragArea` -- roll out menu.
