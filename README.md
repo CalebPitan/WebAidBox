@@ -41,3 +41,8 @@ The above code is just introductory in fact the `nav` function takes more than j
 `type` property helps to register events, for example `...on("click.navigation", function() {...})`. Transition is used for navigation transitioning and it should be given in milliseconds.  
 `event` property specifys default event to open navigation menu.  
 `direction` property specifies the position of the navigation on the window. `"left"` means the menu is on the left side on the screen relative to you and slides out from the left to right. `"right"` could be another value
+`backdrop` property specifies whether the menu uses backdrop
+`backdropClass` property specifies the class for the backdrop element. It can either be `".backdrop"` or `"backdrop"`
+`dataAccessAttribute` property specifies the attribute specified on the `menu button $(".menu-btn")...` element that points to either the class or id of the navigation menu  
+## Licenses
+This software is Licensed under Apache 2.0. You may check it out [Apache 2.0 License](http://www.apache.org/licenses/)
