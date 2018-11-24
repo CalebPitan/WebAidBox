@@ -20,6 +20,24 @@ When that is done, you are now ready to use the cardinal.js plugin. But wait, on
 ```  
 ```html
 <script>  
-     $("menu-btn").nav("init");  
+    $("menu-btn").nav("init");  
+</script>
+```  
+Where `init` is the command taken by `$.fn.nav`.  
+The above code is just introductory in fact the `nav` function takes more than just a command, it also takes a configuration object message. The configuration object helps configure cardinal for you, shows it where to look for the data it needs to keep it up and running. Although cardinal can guess this data and is in one of the cardinal object as `Navigation.fn.defaultConfig`. The guess may be wrong sometimes so it is better to pass the configuration as a javascript object to the function as an argument at `index 1` of the `nav` function. Ideally it should look like this:  
+```html
+<script>
+    $("menu-btn").nav("init", {
+        type: "navigation",
+        transition: 500,
+        event: "click",
+        direction: "left",
+        backdrop: true,
+        backdropClass: "backdrop",
+        dataAccessAttribute: "data-target"
+    });
 </script>
 ```
+`type` property helps to register events, for example `...on("click.navigation", function() {...})`. Transition is used for navigation transitioning and it should be given in milliseconds.  
+`event` property specifys default event to open navigation menu.  
+`direction` property specifies the position of the navigation on the window. `"left"` means the menu is on the left side on the screen relative to you and slides out from the left to right. `"right"` could be another value
