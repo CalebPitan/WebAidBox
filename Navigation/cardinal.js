@@ -2,7 +2,10 @@
  * Cardinal (WebAidBox) 
  * cardinal.js v 1.0
  * @Author Adepitan Caleb
- * Copyright 2018 RealLongman
+ * Caleb Pitan for short or say it's wha'I prefer [grin]
+ * Twitter, Instagram: RealLongman
+ * https://webpaddy.blogspot.com/
+ * Copyright 2018 RealLongman, Adepitan Caleb
  *
  * Dependencies : jQuery;
  *
