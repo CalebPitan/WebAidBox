@@ -86,7 +86,7 @@ The above code is just introductory in fact the `nav` function takes more than j
 .right {
   right: -300px;
 }
-...(etc)
+/*... : means (etc)*/
 ```
 ## Licenses
 This software is Licensed under Apache 2.0. You may check it out [Apache 2.0 License](http://www.apache.org/licenses/)
