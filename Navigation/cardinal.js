@@ -307,6 +307,8 @@
 				resumeX = start,
 				resumeY = start,
 				resume,
+			    	scrollControl,
+			    	scrollControlSet = false,
 				fraction = 3/2;
 
 			var zero = "0px";
@@ -384,27 +386,19 @@
 				};
 
 				var rect = new Rectangle(startX,startY, resumeX,resumeY);
-
-				/*var syncResumeY;
-				
-				setTimeout(function() {
-					syncResumeY = resumeY;
-				},500)
-				if(syncResumeY > resumeY)
-					rect = new Rectangle(startX,startY, resuneX,resumeY)*/
-
 				var wGTh = rect.wGTh();
+				!scrollControlSet && (scrollControl=wGTh), (scrollControlSet=true)
 
 				// This is the logic behind left side nav opening
 
-				if ((!(start < 0)) && (start <= minimumDragArea) && (direction == left) && (currentMenuPosition != zero) && (drawable.nextaction === forth) && wGTh) {
+				if ((!(start < 0)) && (start <= minimumDragArea) && (direction == left) && (currentMenuPosition != zero) && (drawable.nextaction === forth) && wGTh && scrollControl) {
 					destination.css(direction, left_dimension);
 					__proto__.backdrop.css(sSheet);
 				}
 
 				// This is the logic behind left side nav closing
 
-				if ((!(resume > width)) && (drawable.nextaction === back) && (direction == left) && (currentMenuPosition != non_zero_dimen) && wGTh) {
+				if ((!(resume > width)) && (drawable.nextaction === back) && (direction == left) && (currentMenuPosition != non_zero_dimen) && wGTh && scrollControl) {
 					
 					destination.css(direction, vleftDimension)
 					.css(effect, "none");
@@ -413,13 +407,13 @@
 				}
 
 				// This is the logic behind right side nav opening
-				if ((!(start < 0)) && (start >= minimumRightDragArea) && (direction == right) && (currentMenuPosition != zero) && wGTh) {
+				if ((!(start < 0)) && (start >= minimumRightDragArea) && (direction == right) && (currentMenuPosition != zero) && wGTh && scrollControl) {
 					destination.css(direction, right_dimension);
 					__proto__.backdrop.css(rsSheet);
 				} 
 
 				// This is the logic behind right side nav closing
-				if ((!(resume < (windowWidth - width))) && (drawable.nextaction == back) && (direction == right) && (currentMenuPosition != non_zero_dimen) && wGTh) {
+				if ((!(resume < (windowWidth - width))) && (drawable.nextaction == back) && (direction == right) && (currentMenuPosition != non_zero_dimen) && wGTh && scrollControl) {
 					
 					destination.css(direction, vrightDimension)
 					.css(effect, "none");
@@ -433,6 +427,9 @@
 				var offsetSide = destination.css(direction).replace(/[^\d]+$/, '');
 				offsetSide = Math.abs(parseInt(offsetSide));
 				fraction = 3/2;
+				
+				scrollControlSet = false;
+				scrollControl = false;
 
 				// left opening touchend event
 				if (direction == left) {
