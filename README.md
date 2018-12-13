@@ -58,5 +58,35 @@ The above code is just introductory in fact the `nav` function takes more than j
 </div>
 ...
 ```
+### Styles/CSS
+```css
+.backdrop {
+  background: rgba(0,0,0,.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  ...
+}
+.override {
+  text-decoration: none;
+  list-style-type: none;
+  ...
+}
+.main-menu {
+  width: 300px;
+  display: inherit /* Note: not 'none'*/
+  position: fixed;
+  ...
+}
+.left {
+  left: -300px;/* must be same as width*/
+}
+.right {
+  right: -300px;
+}
+...(etc)
+```
 ## Licenses
 This software is Licensed under Apache 2.0. You may check it out [Apache 2.0 License](http://www.apache.org/licenses/)
