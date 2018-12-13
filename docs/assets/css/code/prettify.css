@@ -1,0 +1,100 @@
+.com { 
+ color: #93a1a1;
+}
+
+.dark .com {
+ color: #bcbcbc;
+}
+
+.lit { 
+ color: #195f91;
+}
+
+.dark .lit {
+ color: #cc8358;
+}
+
+.pun, 
+.opn, 
+.clo { 
+ color: #93a1a1;
+}
+
+.fun { 
+ color: #dc322f; 
+}
+
+.dark .fun {
+ color: yellow;
+}
+
+.str, 
+.atv { 
+ color: #D14; 
+}
+
+.dark .str,
+.dark .atv {
+ color: #6da6db; 
+}
+
+.kwd, 
+.prettyprint .tag { 
+ color: #1e347b;
+}
+
+.dark .kwd {
+ color: #009970;
+}
+
+.dark.prettyprint .tag {
+ color: #ea21db;
+ color: #5b7e00;
+}
+
+.typ, 
+.atn, 
+.dec, 
+.var { 
+ color: teal;
+}
+
+.dark .typ, 
+.dark .atn, 
+.dark .dec, 
+.dark .var {
+ color: #cc4514;
+ /* dark theme attribute etc. */
+}
+
+.pln { 
+ color: #48484c; 
+ /* plain text */
+}
+
+.dark .pln { 
+ color: #fffddd;
+ /* dark theme plain */
+}
+
+.prettyprint {
+  padding: 8px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+.prettyprint.linenums {
+  -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+     -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+          box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin: 0 0 0 33px; /* IE indents via margin-left */
+}
+ol.linenums li {
+  padding-left: 12px;
+  color: #bebec5;
+  line-height: 20px;
+  text-shadow: 0 1px 0 #fff;
+}

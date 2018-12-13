@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Cardinal.js</title>
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-title" content="Utiliser.web">
+  
+  <meta name="theme-color" content="rgba(115,172,225,1)"/>
+  <meta name="moz-theme-color" content="rgba(115,172,225,1)" class="theme"/>
+   <!-- Windows Phone --> 
+  <meta name="msapplication-navbutton-color" content="rgba(115,172,225,1)" class="theme"/>
+  <!-- iOS Safari --> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="rgba(115,172,225,1)" class="theme"/> 
+  <link rel="stylesheet" href="./assets/css/cardinal.css" />
+  <link rel="stylesheet" href="./assets/css/cardinal-responsive.css" />
+  
+  <link rel="stylesheet" href="./assets/css/code/prettify.css" />
+  <link rel="stylesheet" href="./assets/css/code/codewriter.css" />
+  
+  
+ </head>
+ 
+ <body>
+ 
+  <nav class="navbar affix top">
+   <a href="#menu" class="nav-menu-opener material-icons"  data-target="navi-menu">
+     menu
+   </a>
+   <div class="nav-container off-left offset">
+    <a href="#" class="nav-link">
+     Home
+    </a>
+    <a href="#" class="nav-link">
+     Docs
+    </a>
+    <a href="#" class="nav-link">
+     Features
+    </a>
+   </div>
+  </nav>
+  <div class="backdrop"></div>
+  <div class="main-menu left" id="navi-menu" data-hash-nav-max-width="767" data-nav-drawer-max-width="767">
+   <ul class="override">
+    <li class="exempt">
+     <div class="head lead"> 
+      <a href="javascript:void(window.history.back());" title="back" class="nav-link material-icons ic bk" style="font-size:25px;width:0;">&#xe5c4;</a>
+       Doc: Navigation
+     </div>
+    </li>
+    
+    <li class="">
+     <div class="menu-desc">
+      Components
+     </div>
+    </li>
+    
+    <li class=""> 
+     <div class="rule">
+     </div>
+    </li>
+    <li class="">
+     <a href="#" class="nav-link">
+      Nav
+     </a>
+    </li>
+    <li class="">
+     <a href="#" class="nav-link">
+      Hash Nav
+     </a>
+    </li>
+    <li class="">
+     <a href="#" class="nav-link">
+      Navigation Drawer
+     </a>
+    </li>
+    
+    <li class="">
+     <div class="rule">
+     </div>
+    </li>
+    <li class="">
+     <a href="help.html" class="nav-link">
+      <span class="material-icons ic mu">help</span> Help
+     </a>
+    </li>
+    <li class="">
+     <a href="sendfeedback.html" coass="nav-link">
+      <span class="material-icons ic mu">feedback</span> Send Feedback
+     </a>
+    </li>
+   </ul>
+  </div>
+  
+  <div class="header">
+   <div class="package">Cardinal.js</div>
+   <p class="centered"> Compact, powerful, stunning, fast, and easy to use extension for offering great user experience. The best navigation plugin for your web apps. </p>
+   <center><img src="../img/cardinalX256.png"/></center>
+  </div>
+  
+  <div class="docs-main" data-nav-width="300px">
+   <div class="docs">
+    <h1> HTML Data Definition and Display</h1>
+    <div class="rule"></div>
+    The HTML data display is written in the div block or any perfect alternative. The classname given to the parent element of the navigation data would programatically be transversed from the `data-target` attribute from the navigation button. The `data-target` should point to the `id` of the main menu.
+    <div> The navigation consists of the hash navigation which supports the device back button. Every other module in the navigation program partially depends on the hash navigation module. The navigation drawer module requires a button as an alternative for conditions where the drawer event may not work.</div>
+    <div> The navigation menu, for responsive designs, needs two attributes, the max-width the hash nav should function with and when the drawer should function with. The navigation drawer mainly targets touch devices and not desktop devices. By default and standard it is 767px. This doesn't support both tablet and desktop. On tablet and desktop the navigation menu isn't hidden, therefore there is no use.
+    
+    
+    <pre class="code-block prettyprint dark">&lt;div class=&quot;container&quot;&gt;
+  &ltdiv class=&quot;navbar affix top&quot;&gt;
+    &lt;a href=&quot;#menu&quot; class=&quot;nav-menu-opener material-icons&quot; data-target=&quot;navigation&quot;&gt;menu&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;backdrop&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;main-menu left&quot; id=&quot;navigation&quot; data-hash-nav-max-width=&quot;767&quot; data-nav-drawer-max-width=&quot;767&quot;&gt;
+    &lt;ul class=&quot;override&quot;&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;examples.html&quot; class=&quot;nav-link&quot;&gt;Examples&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+    </div>
+   </div>
+
+   <div class="docs">
+    <h1>Script Initialization</h1>
+    <div class="rule"></div>
+    The script handler for the navigation is initialised right from onload. Every plugin data of the navigation is as an extension of the jQuery object prototype as a lot of sites make use of jQuery, and to reduce complexity we consider it more convinient to build it on top of the jQuery library. A compulsory argument at <kbd>index 0</kbd> of value <code>"init"</code> is passed to the <code>nav</code> method and at <kbd>index 1</kbd> of the argument array is the configuration object for the navigation. <br> 
+    <section class="docs-note">
+     <b>Note</b>: If you do not provide the configuration object, it would be gussed by <code>Navigatio.fn.defaultConfig</code> and may not be correctly guessed. It is better you provide the configurationObject as the second parameter.</section>
+    
+    <pre class="prettyprint dark">&lt;script&gt;
+  $(&quot;nav-menu-opener&quot;).nav(&quot;init&quot;, {
+    direction: &quot;left&quot;,
+    transition: 400,
+    event: &quot;click&quot;,
+    backdrop: true
+  });
+&lt;/script&gt;</pre>
+   
+  </div>
+  
+  
+  <div class="docs">
+   <h1>CSS Classes and Styles</h1>
+   <div class="rule"></div>
+   We provide a css file as the basic template for the navigation plugin. It contains style definitions for the navigation data. The style definitons are the default and can be tweaked to make it fit your designs. Some examples and user's guide are given below.<br/>
+   <h2>CSS Class Guides</h2>
+   <div>
+   The <code>.navbar</code> is given to the navbar; a class, <code>.affix</code> gives the navbar a fixed position; the <code>.top</code> is used to fix the navbar to the top. Every link in the navbar and menu can be given the <code>.nav-link</code> class, and the <code>.material-icons, .nav-menu-opener</code> for the button that opens the menu.
+    <pre class="prettyprint dark">.backdrop {
+ background: rgba(0,0,0,.7);
+}
+.main-menu.offset {
+ ...
+}</pre>
+    The <code>.backdrop</code> class provides a back overlay for the menu. It is not totally opaque. It is fixed and has both height and width of <kbd>100%</kbd>. Furthermore, the <code>.backdrop.offset</code>: this is used with the <code>.main-menu.offset</code> class. This means the menu is not attached to the top and so also mustn't the backdrop.
+    <div>Add a <code>.head .lead</code> class to a div in the <code>.main-menu</code> class to add a header to the navigation menu. You may also provide a back button to easily close nav.
+    </div>
+   </div>
+  </div>
+
+   
+  
+  <div class="tofoot">
+   <div class="rule"></div>
+  </div>
+   
+  <footer class="footer">
+   <div class="footer-contents">
+     Modern Utils, Utiliser by Adepitan Caleb, RealLongman. Utiliser and RealLongman are trademarks of the respective owners and may be registered. Built with you in mind.
+   </div>
+  </footer>
+  
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/cardinal.js"></script>
+  <script src="./assets/js/utiliser.js"></script>
+  <script src="./assets/js/utils-clickables.js"></script>
+  <script src="./assets/js/highlights/google.js"></script>
+  <script async src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+  <script>
+    $(".nav-menu-opener").nav("init",{
+      event: "click",
+      transition: 500,
+      direction: "left",
+      backdrop: true
+    });
+  </script>
+  <script>(function(d){var el=d.getElementsByTagName("pre");for(var i=0;i<el.length;i++){var a=el[i].innerHTML;el[i].innerHTML="<ol><li>"+(el[i].innerHTML.replace(/(?:\r\n|\r|\n)/g,"</li><li>"))+"</li></ol>";}})(document);</script>
+ </body>
+</html>
