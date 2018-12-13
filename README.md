@@ -1,10 +1,9 @@
 # WebAidBox
-Compact, powerful, stunning, fast, and easy to use extension for offering great user experience and unique designs for web apps. 
+The web first aid box, a development and production software for making development - build a easy task, and production of amazing UI designs offering great UX all with one tool in your disposal. 
+It's compact, powerful, fast, and easy to use on all platforms. 
 WebAidBox is a web design utility that leverages your web app with native Operating Systems' app. It is meant to make your web app look stunning with features you may normally not find on the web.  
-**Cardinal.js: Powerful navigation drawer mirrors android's**  
-![Cardinal logo](https://github.com/CalebPitan/WebAidBox/blob/master/Navigation/img/cardinalX256.png)  
-# WebAidBox
-WebAidBox is a web utility program written to optimise web designs, providing great functionality for front-end web development. WebAidBox imports new design features into the web and provides easy to use and optimised codes to making work easier. You can finish tedious tasks in few lines of code with WebAidBox.  
+
+WebAidBox is written to optimise web designs, providing great functionality for front-end web development. WebAidBox imports new design features into the web and provides easy to use and optimised codes to making work easier. You can finish tedious tasks in few lines of code with WebAidBox.  
 ## Cardinal.js  
 Cardinal.js is a component of **WebAidBox** (and as of now the only component). WebAidBox Cardinal.js is a javascript navigation plugin. Cardinal.js is a compact, fast, non-bloated, easy to use plugin that makes you not to worry about your sites navigation menu and user experience. Cardinal.js offers the side navigation, both left navigation and right navigation. It allows a button to lauch the side navigation as every normal navigation, it provides the hash navigation module to allow the use of the device's back key and the browsers history forward button to close and open navigation, and the best of all is the navigation drawer provided by Cardinal.js. The navigation drawer mirrors the android navigation drawer and works in a stunning way.  
 ![Cardinal Logo](https://github.com/CalebPitan/WebAidBox/blob/master/Navigation/img/cardinalX256.png)  
@@ -43,6 +42,21 @@ The above code is just introductory in fact the `nav` function takes more than j
 `direction` property specifies the position of the navigation on the window. `"left"` means the menu is on the left side on the screen relative to you and slides out from the left to right. `"right"` could be another value
 `backdrop` property specifies whether the menu uses backdrop
 `backdropClass` property specifies the class for the backdrop element. It can either be `".backdrop"` or `"backdrop"`
-`dataAccessAttribute` property specifies the attribute specified on the `menu button $(".menu-btn")...` element that points to either the class or id of the navigation menu  
+`dataAccessAttribute` property specifies the attribute specified on the `menu button $(".menu-btn")...` element that points to either the class or id of the navigation menu 
+###Markup  
+```html
+...
+<a href="#menu" data-target="navigation" title="Menu">Menu</a>
+<div class="backdrop"></div>
+<div class="main-menu left" id="navigation" data-hash-nav-max-width="767" data-nav-drawer-max-width="767">
+    <ul class="override">
+        <li>
+            <a href="#item1" class="nav-link">Item 1</a>
+            ...
+        </li>
+    </ul>
+</div>
+...
+```
 ## Licenses
 This software is Licensed under Apache 2.0. You may check it out [Apache 2.0 License](http://www.apache.org/licenses/)
