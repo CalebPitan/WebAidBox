@@ -27,7 +27,7 @@
   var clickables = [],
       clickable,
       // edit audio path according to file system
-       popSound = new Audio('/storage/emulated/0/projects/assets/sound/utils-pop.mp3');
+       popSound = new Audio('./assets/sound/utils-pop.mp3');
       clickable = document.getElementsByTagName('a');
   clickables.push(clickable);
   clickable = document.getElementsByTagName('button');
