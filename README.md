@@ -46,8 +46,9 @@ The above code is just introductory in fact the `nav` function takes more than j
 `direction` property specifies the position of the navigation on the window. `"left"` means the menu is on the left side on the screen relative to you and slides out from the left to right. `"right"` could be another value
 `backdrop` property specifies whether the menu uses backdrop
 `backdropClass` property specifies the class for the backdrop element. It can either be `".backdrop"` or `"backdrop"`
-`dataAccessAttribute` property specifies the attribute specified on the `menu button $(".menu-btn")...` element that points to either the class or id of the navigation menu 
-###Markup  
+`dataAccessAttribute` property specifies the attribute specified on the `menu button $(".menu-btn")...` element that points to either the class or id of the navigation menu.  
+
+### Markup  
 ```html
 ...
 <a href="#menu" data-target="navigation" title="Menu">Menu</a>
