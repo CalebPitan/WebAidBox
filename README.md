@@ -6,7 +6,11 @@ WebAidBox is a web design utility that leverages your web app with native Operat
 WebAidBox is written to optimise web designs, providing great functionality for front-end web development. WebAidBox imports new design features into the web and provides easy to use and optimised codes to making work easier. You can finish tedious tasks in few lines of code with WebAidBox.  
 ## Cardinal.js  
 Cardinal.js is a component of **WebAidBox** (and as of now the only component). WebAidBox Cardinal.js is a javascript navigation plugin. Cardinal.js is a compact, fast, non-bloated, easy to use plugin that makes you not to worry about your sites navigation menu and user experience. Cardinal.js offers the side navigation, both left navigation and right navigation. It allows a button to lauch the side navigation as every normal navigation, it provides the hash navigation module to allow the use of the device's back key and the browsers history forward button to close and open navigation, and the best of all is the navigation drawer provided by Cardinal.js. The navigation drawer mirrors the android navigation drawer and works in a stunning way.  
-![Cardinal Logo](https://github.com/CalebPitan/WebAidBox/blob/master/Navigation/img/cardinalX256.png)  
+
+<p align="center">
+  <img height="128" width="128" src="https://github.com/CalebPitan/WebAidBox/blob/master/Navigation/img/cardinalX256.png" />
+</p>  
+
 ### Using Cardinal.js  
 The first thing is to import the Cardinal.js script into your markup  
 ```html
