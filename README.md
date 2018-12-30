@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://github.com/CalebPitan/WebAidBox/blob/master/WABX128.png"/>
+</p>
 # WebAidBox
 The web first aid box, a development and production software for making development - build a easy task, and production of amazing UI designs offering great UX all with one tool in your disposal. 
 It's compact, powerful, fast, and easy to use on all platforms. 
